@@ -4000,7 +4000,7 @@ okeeol.sho.shody.sho.shol.okeeeol.cheos.sheokeey.sheeor.chchy.chodaiin.sheeckhey
 cphoar.o!aiin.ypcholy.daiin.otaiin.otaiin.yfolaiin.fcheolai!n.ypchey.ypho*o-shotey.odariin.sheoor.sheor.ckheey.ykhey.qokchey.cholp.cheol.dy-
 olaiin.oteol.chor.oteey.chokchey.kor.daiin.shok.chol.chol.qoky.daiin-ol.s.al.ydar.daiin.or.ory.okeey.daiin.shea.daiin.okol.chear-
 daiin.okeol.qokcheol.ykeor.dar.ol.otechy.ykeor.dor.aiin.chl!s.cheol-okol.shey.qodar.soiin.choko.qokeol.daiin.o!dar.okchol.cheor.chety-
-kor.aithy.ol.chs!-sho.olcheeol.kal!shey.okeoly.oiin.aiioly=
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%kor.aithy.ol.chs!-sho.olcheeol.kal!shey.okeoly.oiin.aiioly=
 sairaly=
 otaldy=
 otal=
@@ -4420,6 +4420,7 @@ soraiin.cheeo.lo.lchey.qokaiin.shedy.okai!n.shear.qokai!n.chees.ykarai!n-
 ycheeo.lkeey=
 tcheoko.lkshedy.qokaiin.lky.raiin.chy.rody.chlar.cheeor!for.cheoly-
 okaiin.ol.lcho.rcheo.raiin.qokaiin.chey.chokaiin.chear.ar.ol.rar!olchl-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%-
 ycheeo.lkaiin.cho.ror.sheo!l.kai!n.shor.sar.aiiry.sheo.al.kair!am-
 yshar.chkar.aiiiky.ral.cheol.or!aiin=
 poral.sho.keeody.qokai!n.chckhy.olteeedy.qopches.al.karchy.qotedary-
