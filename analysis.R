@@ -3,5 +3,28 @@ PrepareVoynichManuscript <- function(filepath) {
   file <- scan(filepath, character(0))
   # remove characters !, -, %, ?, =
   file <- gsub("[!=?%-]", "", file)
-  file
+}
+
+CreateVoynichDict <- function(manuscript) {
+  # retrive single words
+  words <-sapply(manuscript, strsplit, split = "[.]")
+  # make vector with unique words
+  words <- unique(unlist(words))
+  # remove words with uncertain character (*)
+  words <- words[-grep("[*]", words)]
+  # order words by length (ascending)
+  words[order(nchar(words), words)]
+}
+
+LoadLanguageDict <- function(dictPath) {
+  # load dict file
+  dict <- scan(dictPath, character(0), fileEncoding = "UTF-16")
+  # remove comments (%)
+  dict <- dict[-grep("[%]", dict)]
+  # use only unique words
+  dict <- unique(dict)
+}
+
+LoadAllLanguageDicts <- function(dictDir) {
+  # list all dict files
 }
