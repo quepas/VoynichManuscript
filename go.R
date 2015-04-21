@@ -44,26 +44,21 @@ DrawBoxplots <- function() {
 }
 
 PrepareDictInfo <- function() {
-  language <- c("catalan",  "croatian",   "czech",   "danish",
-                #"dutch",
-                "english_uk", "french",  "german",
-                "italian",  "latin",      "polish",  "portuguese",
-                "romanian", #"russian",
-                "spanish", "swedish")
-  encoding <- c("latin1", "cp1250", "cp1250", "cp1250",
-                #"cp1250",
-                "cp1250", "cp1250", "cp1250",
-                "cp1250", "latin1", "UTF-16LE", "UTF-16LE",
-                "UTF-16LE", #"cp1250",
-                "UTF-16LE", "UTF-16LE")
+  language <- c("catalan",    "croatian",   "czech",   "danish",
+                "english_uk", "french",     "german",
+                "italian",    "latin",      "polish",  "portuguese",
+                "romanian",   "spanish",    "swedish")
+  encoding <- c("latin1",   "cp1250",   "cp1250",   "cp1250",
+                "cp1250",   "cp1250",   "cp1250",
+                "cp1250",   "latin1",   "UTF-16LE", "UTF-16LE",
+                "UTF-16LE", "UTF-16LE", "UTF-16LE")
   path <- c("dict/winedt/catalan.dic",  "dict/winedt/croatian.dic",
             "dict/winedt/czech.dic",    "dict/winedt/danish.dic",
-            #"dict/winedt/dutch.dic",
             "dict/winedt/english_uk.dic",
             "dict/winedt/french.dic",   "dict/winedt/german.dic",
             "dict/winedt/italian.dic",  "dict/winedt/latin.dic",
             "dict/winedt/polish.dic",   "dict/winedt/portuguese.dic",
-            "dict/winedt/romanian.dic", #"dict/winedt/russian.dic",
+            "dict/winedt/romanian.dic",
             "dict/winedt/spanish.dic",  "dict/winedt/swedish.dic")
   data.frame(language, encoding, path, stringsAsFactors = FALSE)
 }
