@@ -1,3 +1,5 @@
+library(Hmisc)
+
 source("analysis.R")
 
 Go <- function() {
@@ -35,12 +37,18 @@ DrawBoxplots <- function() {
     dict <- ncharDicts[[langName]]
 
     if (i == 1) {
-      boxplot(dict, at = 1, xlim = c(1, length(dictMeans) + 3), ylim = c(0, maxNChars), col = colors[i])
+      boxplot(dict, at = 1, xlim = c(1, length(dictMeans)),
+              ylim = c(0, maxNChars), col = colors[i],
+              main = "Word length for languages",
+              xlab = "Language",
+              ylab = "Word length")
     } else {
       boxplot(dict, at = i, add = TRUE, col = colors[i])
     }
   }
-  legend(15.5, 35, names(dictMeans), fill = colors, cex = 0.75, horiz = FALSE, y.intersp = 0.6)
+  axis(1, at=1:length(dictMeans), labels=names(dictMeans), cex.axis = 0.65)
+  minor.tick(ny=10, tick.ratio=0.5)
+  #legend(15.5, 35, names(dictMeans), fill = colors, cex = 0.75, horiz = FALSE, y.intersp = 0.6)
 }
 
 PrepareDictInfo <- function() {
