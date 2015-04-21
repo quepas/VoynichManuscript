@@ -22,12 +22,3 @@ LoadLanguageDict <- function(dictPath, encoding = "UTF-16LE") {
   # use only unique words
   dict <- unique(dict)
 }
-
-LoadAllLanguageDicts <- function(dictDir) {
-  # list all dict files
-  dictFiles <- list.files(dictDir)
-  # concatenate with dict directory
-  dictFiles <- paste(dictDir, dictFiles, sep="/")
-  # load all dicts
-  list(sapply(dictFiles, LoadLanguageDict))
-}
