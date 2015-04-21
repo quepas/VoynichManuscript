@@ -16,15 +16,18 @@ CreateVoynichDict <- function(manuscript) {
   words[order(nchar(words), words)]
 }
 
-LoadLanguageDict <- function(dictPath) {
+LoadLanguageDict <- function(dictPath, encoding = "UTF-16LE") {
   # load dict file
-  dict <- scan(dictPath, character(0), fileEncoding = "UTF-16")
-  # remove comments (%)
-  dict <- dict[-grep("[%]", dict)]
+  dict <- scan(dictPath, character(0), fileEncoding = encoding)
   # use only unique words
   dict <- unique(dict)
 }
 
 LoadAllLanguageDicts <- function(dictDir) {
   # list all dict files
+  dictFiles <- list.files(dictDir)
+  # concatenate with dict directory
+  dictFiles <- paste(dictDir, dictFiles, sep="/")
+  # load all dicts
+  list(sapply(dictFiles, LoadLanguageDict))
 }
