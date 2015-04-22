@@ -95,3 +95,42 @@ PrepareDictInfo <- function() {
             "dict/winedt/spanish.dic",  "dict/winedt/swedish.dic")
   data.frame(language, encoding, path, stringsAsFactors = FALSE)
 }
+
+TestKS <- function() {
+  dictMeans <- CalculateDictMeans(ncharDicts)
+  voynich <- ncharDicts[["voynich"]]
+
+  for (i in 1:length(dictMeans)) {
+    langName <- names(dictMeans[i])
+    dict <- ncharDicts[[langName]]
+    cat("voynich vs. ", langName)
+    print(ks.test(voynich, dict))
+  }
+}
+
+DrawQQ <- function() {
+  par(mfrow = c(3, 5))
+  dictMeans <- CalculateDictMeans(ncharDicts)
+  voynich <- ncharDicts[["voynich"]]
+
+  for (i in 1:length(dictMeans)) {
+    langName <- names(dictMeans[i])
+    dict <- ncharDicts[[langName]]
+    qqplot(voynich, dict, col = c("red", "blue"))
+    title(paste("voynich vs. ", langName))
+  }
+}
+
+DrawQQNorm <- function() {
+  #qqnorm(y); qqline(y, col = 2,lwd=2,lty=2)
+  par(mfrow = c(3, 5))
+  dictMeans <- CalculateDictMeans(ncharDicts)
+  voynich <- ncharDicts[["voynich"]]
+
+  for (i in 1:length(dictMeans)) {
+    langName <- names(dictMeans[i])
+    dict <- ncharDicts[[langName]]
+    qqnorm(dict, main = langName)
+    qqline(dict, col = 2,lwd=2,lty=2)
+  }
+}
